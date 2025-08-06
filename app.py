@@ -65,8 +65,36 @@ with st.expander("🔐 Click to unlock your final surprise..."):
         
          Just a reminder that you are one of the most precious part of my entire simulation (my life).  
                     
-        *Now go check the gift box.* 🎁
+        *Now check the gift below.* 🎁
         """)
-        st.image("assets/unlock_gif.gif", caption="You made it to the heart of the system 💜", use_container_width=True)
+        st.image("assets/letter.jpg", caption="A little something I made with all my heart 💌", use_container_width=True)
+
+
     elif password:
         st.error("Oops! That's not it. Love doesn't respond to random inputs 😛")
+
+    if st.button("👀 One last thing?"):
+        st.image("assets/silly_you.jpg", caption="Even this version of you is adorable 💀")
+
+    st.markdown("""
+        ---
+
+            **Final Model Output:**  
+                Accuracy = 100%  
+                Confidence = Absolute  
+                Conclusion = *She loves you in every known dimension*
+                                
+
+        """)
+    
+    st.markdown("""
+         **"Among all the strange equations of life, you are my one true solution."**
+            *May your curiosity always stay wild and you never forget how deeply you are cared for.*
+                
+                ***HAPPY BIRTHDAY LIL HONEY BEE!!***
+
+        **A Little Gift From Your Jiggly Baby**
+                *I hope you like it.*
+        """)
+
+    
