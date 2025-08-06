@@ -57,8 +57,6 @@ def show_main_app():
 
     df = get_love_dataframe()
 
-    show_love_story()
-
    # Fit a simple polynomial regression model
     X = df["Days"].values.reshape(-1, 1)
     y = df["Love Score"].values
@@ -84,6 +82,7 @@ def show_main_app():
 
     st.caption("Every point on this curve is a memory, a smile, a moment we chose each other.")
 
+    show_love_story()
 
     st.markdown("---")
     st.subheader("🎁 The Final Surprise")
