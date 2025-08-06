@@ -50,3 +50,23 @@ ax.grid(True)
 st.pyplot(fig)
 
 st.caption("Every point on this curve is a memory, a smile, a moment we chose each other.")
+
+st.markdown("---")
+st.subheader("🎁 The Final Surprise")
+
+with st.expander("🔐 Click to unlock your final surprise..."):
+    password = st.text_input("Enter the secret code (hint: my sexy wala nickname):", type="password")
+
+    if password == "koala":  
+        st.success("Access granted! 💘")
+        st.markdown("""
+        **You unlocked the final layer of this chaos and love.**  
+        And behind it... is just something simple.
+        
+         Just a reminder that you are one of the most precious part of my entire simulation (my life).  
+                    
+        *Now go check the gift box.* 🎁
+        """)
+        st.image("assets/unlock_gif.gif", caption="You made it to the heart of the system 💜", use_container_width=True)
+    elif password:
+        st.error("Oops! That's not it. Love doesn't respond to random inputs 😛")
