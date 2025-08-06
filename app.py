@@ -49,4 +49,4 @@ ax.grid(True)
 
 st.pyplot(fig)
 
-st.caption("This model's loss is 0.00001 — because love doesn't lie. 🥹")
+st.caption("Every point on this curve is a memory, a smile, a moment we chose each other.")
