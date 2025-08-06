@@ -1,12 +1,13 @@
 import streamlit as st
+st.set_page_config(page_title="Strangely Attracted 💘", layout="centered")
+
 from PIL import Image
 import random
 import numpy as np
 import matplotlib.pyplot as plt
 from love_data import get_love_dataframe
 
-# Set page config
-st.set_page_config(page_title="Strangely Attracted 💘", layout="centered")
+
 
 # Session state to track access
 if "unlocked" not in st.session_state:
