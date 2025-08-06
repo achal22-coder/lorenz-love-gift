@@ -49,7 +49,7 @@ events = {
     "Got Together": "2023-09-05",
     "First Kiss": "2023-11-15",
     "Long Distance": "2024-01-27",
-    "Her Birthday": "2024-12-22"
+    "Your Birthday": "2024-12-22"
 }
 
 # Assign a symbolic love score (totally subjective and cute)
@@ -59,7 +59,7 @@ love_scores = {
     "Got Together": 60,
     "First Kiss": 80,
     "Long Distance": 95,
-    "Her Birthday": 100
+    "Your Birthday": 100
 }
 
 # Convert to DataFrame
