@@ -24,7 +24,7 @@ def password_screen():
     if password == "doraemon":
         st.success("Access granted! Welcome to the birthday love simulation 💘")
         st.session_state.unlocked = True
-        st.experimental_rerun()
+        st.rerun()
     elif password:
         wrong_responses = [
            
