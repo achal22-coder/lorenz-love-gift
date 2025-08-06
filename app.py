@@ -74,7 +74,7 @@ with st.expander("🔐 Click to unlock your final surprise..."):
         st.error("Oops! That's not it. Love doesn't respond to random inputs 😛")
 
     if st.button("👀 One last thing?"):
-        st.image("assets/silly_you.jpg", caption="Even this version of you is adorable 💀")
+        st.image("assets/silly_you.jpg", caption="Even this version of you is adorable")
 
     st.markdown("""
         
@@ -91,7 +91,7 @@ with st.expander("🔐 Click to unlock your final surprise..."):
          **"Among all the strange equations of life, you are my one true solution."**
             *May your curiosity always stay wild and you never forget how deeply you are cared for.*
                 
-                **HAPPY BIRTHDAY LIL HONEY BEE!!**
+                HAPPY BIRTHDAY LIL HONEY BEE!!
 
         **A Little Gift From Your Jiggly Baby**
                 *I hope you like it.*
