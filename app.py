@@ -106,23 +106,23 @@ def show_main_app():
             if st.button("👀 One last thing?"):
                 st.image("assets/silly_you.jpg", caption="Even this version of you is adorable")
 
-            st.markdown("""
-            ---
+                st.markdown("""
+                ---
 
-            **Final Model Output:**  
-            Accuracy = 100%  
-            Confidence = Absolute  
-            Conclusion = *She loves you in every known dimension*
-            """)
+                **Final Model Output:**  
+                Accuracy = 100%  
+                Confidence = Absolute  
+                Conclusion = *She loves you in every known dimension*
+                """)
 
-            st.markdown("""
-            **"Among all the strange equations of life, you are my one true solution."**  
-            *May your curiosity always stay wild and you never forget how deeply you are cared for.*
+                st.markdown("""
+                **"Among all the strange equations of life, you are my one true solution."**  
+                *May your curiosity always stay wild and you never forget how deeply you are cared for.*
 
-            **HAPPY BIRTHDAY LIL HONEY BEE!!**  
-            **A Little Gift From Your Jiggly Baby**  
-            *I hope you like it.*
-            """)
+                **HAPPY BIRTHDAY LIL HONEY BEE!!**  
+                **A Little Gift From Your Jiggly Baby**  
+                *I hope you like it.*
+                """)
     
         elif password:
             st.error("Oops! That's not it. Love doesn't respond to random inputs 😛")
