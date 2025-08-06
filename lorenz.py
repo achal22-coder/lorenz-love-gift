@@ -51,36 +51,4 @@ def plot_lorenz(state, save_path="assets/lorenz.png"):
     plt.savefig(save_path, dpi=300, bbox_inches='tight', facecolor=fig.get_facecolor())
     plt.close()
 
-    def create_lorenz_gif(state, save_path="assets/lorenz.gif"):
-        os.makedirs("assets", exist_ok=True)
-
-    x, y, z = state.T
-    frames = []
-
-    fig = plt.figure(figsize=(8, 6), facecolor='black')
-    ax = fig.add_subplot(projection='3d')
-
-    for i in range(10, len(x), 10):
-        ax.clear()
-        ax.set_facecolor('black')
-        ax.set_axis_off()
-
-        # Plot the current portion of the trajectory
-        ax.plot(x[:i], y[:i], z[:i], color='hotpink', linewidth=1.8)
-
-        ax.set_title("Our Chaotic Love 🦋", color='white', fontsize=12, pad=20)
-        ax.text2D(0.05, 0.9, "Built on chaos, bound by love.", transform=ax.transAxes, color='white', fontsize=9)
-
-        # Save this frame to a temporary buffer
-        fname = f"assets/frame_{i}.png"
-        plt.savefig(fname, bbox_inches='tight', facecolor='black')
-        frames.append(imageio.imread(fname))
-
-    # Save the gif
-    imageio.mimsave(save_path, frames, fps=20)
-
-    # Cleanup: remove temp frames
-    for f in frames:
-        os.remove(f.name)
     
-    plt.close()
