@@ -47,11 +47,10 @@ def show_main_app():
     Welcome to the butterfly effect of our love 🦋💜
     """)
 
-    # Lorenz Attractor Plot (GIF if available)
-    try:
-        st.image("assets/lorenz.gif", caption="We may swirl and twist, but we always come back together.", use_container_width=True)
-    except:
-        st.image("assets/lorenz.png", caption="We may swirl and twist, but we always come back together.", use_container_width=True)
+    # Display the Lorenz attractor plot
+    image = Image.open("assets/lorenz.png")
+    st.image(image, caption="We may swirl and twist, but we always come back together.", use_container_width=True)
+
 
     st.markdown("---")
     st.subheader("📈 Our Love Regression")
@@ -60,16 +59,18 @@ def show_main_app():
 
     show_love_story()
 
-    # Polynomial Regression
+   # Fit a simple polynomial regression model
     X = df["Days"].values.reshape(-1, 1)
     y = df["Love Score"].values
     z = np.polyfit(df["Days"], df["Love Score"], 3)
     p = np.poly1d(z)
 
+    # Plot the regression
     fig, ax = plt.subplots()
     ax.scatter(df["Days"], df["Love Score"], color='purple', label='Actual Points')
     ax.plot(df["Days"], p(df["Days"]), color='hotpink', linewidth=2, label='Love Curve')
 
+    # Annotate the events
     for _, row in df.iterrows():
         ax.annotate(row["Event"], (row["Days"], row["Love Score"] + 2), fontsize=8)
 
@@ -83,17 +84,28 @@ def show_main_app():
 
     st.caption("Every point on this curve is a memory, a smile, a moment we chose each other.")
 
+
     st.markdown("---")
     st.subheader("🎁 The Final Surprise")
 
-    st.markdown("""
-    **You unlocked the final layer of this chaos and love.**  
-    And behind it... is just something simple.
+    with st.expander("🔐 Click to unlock your final surprise..."):
+        password = st.text_input("Enter the secret code (hint: my sexy wala nickname):", type="password")
 
-    Just a reminder that you are one of the most precious part of my entire simulation (my life).  
+    if password == "koala":  
+        st.success("Access granted! 💘")
+        st.markdown("""
+        **You unlocked the final layer of this chaos and love.**  
+        And behind it... is just something simple.
+        
+         Just a reminder that you are one of the most precious part of my entire simulation (my life).  
+                    
+        *Now check the gift below.* 🎁
+        """)
+        st.image("assets/letter.jpg", caption="A little something I made with all my heart 💌", use_container_width=True)
 
-    *Now check the gift below.* 🎁
-    """)
+
+    elif password:
+        st.error("Oops! That's not it. Love doesn't respond to random inputs 😛")
 
     st.image("assets/letter.jpg", caption="A little something I made with all my heart 💌", use_container_width=True)
 
