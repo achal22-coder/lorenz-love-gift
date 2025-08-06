@@ -51,6 +51,7 @@ def show_main_app():
     image = Image.open("assets/lorenz.png")
     st.image(image, caption="We may swirl and twist, but we always come back together.", use_container_width=True)
 
+    show_love_story()
 
     st.markdown("---")
     st.subheader("📈 Our Love Regression")
@@ -82,13 +83,16 @@ def show_main_app():
 
     st.caption("Every point on this curve is a memory, a smile, a moment we chose each other.")
 
-    show_love_story()
+  
 
     st.markdown("---")
     st.subheader("🎁 The Final Surprise")
 
-    with st.expander("🔐 Click to unlock your final surprise..."):
-        password = st.text_input("Enter the secret code (hint: my sexy wala nickname):", type="password")
+    st.markdown("---")
+st.subheader("🎁 The Final Surprise")
+
+with st.expander("🔐 Click to unlock your final surprise..."):
+    password = st.text_input("Enter the secret code (hint: my sexy wala nickname):", type="password")
 
     if password == "koala":  
         st.success("Access granted! 💘")
@@ -105,9 +109,7 @@ def show_main_app():
 
     elif password:
         st.error("Oops! That's not it. Love doesn't respond to random inputs 😛")
-
-    st.image("assets/letter.jpg", caption="A little something I made with all my heart 💌", use_container_width=True)
-
+        
     if st.button("👀 One last thing?"):
         st.image("assets/silly_you.jpg", caption="Even this version of you is adorable")
 
