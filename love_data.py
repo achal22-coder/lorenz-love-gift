@@ -1,25 +1,29 @@
 import streamlit as st
+import pandas as pd
+from datetime import datetime
 
-st.markdown("---")
-st.subheader("📖 Our Scientific Love Story")
+# 🧠 MOVE THIS into a function so it doesn't run early!
+def show_love_story():
+    st.markdown("---")
+    st.subheader("📖 Our Scientific Love Story")
 
-with st.expander("🧪 Click to expand the love..."):
-    st.markdown("""
+    with st.expander("🧪 Click to expand the love..."):
+        st.markdown("""
 **14 August – The Beginning**  
 Our first text.  
-Like the starting point in a chaotic system small, but it changed everything.
+Like the starting point in a chaotic system — small, but it changed everything.
 
 ---
 
 **29 August – A Beautiful Disruption**  
 You proposed.  
-Two variables drifted apart from normal emotions began to swirl and dance.
+Two variables drifted apart from normal — emotions began to swirl and dance.
 
 ---
 
 **5 September – Orbit Locked**  
 We got together.  
-Even in chaos, we found each other constantly moving, yet always drawn back.
+Even in chaos, we found each other — constantly moving, yet always drawn back.
 
 ---
 
@@ -31,18 +35,16 @@ The system found rhythm. A single moment settled into something unforgettable.
 
 **27 January – Long Distance Begins**  
 A disturbance.  
-New forces entered, but our connection stayed strong steady through the storm.
+New forces entered, but our connection stayed strong — steady through the storm.
 
 ---
 
 **18 August – A Full Circle**  
 Your birthday.  
-The system loops not repeating, but growing. Our love, evolving with time.
-    """)
-import pandas as pd
-from datetime import datetime
+The system loops — not repeating, but growing. Our love, evolving with time.
+        """)
 
-# Important dates in YYYY-MM-DD format
+# 🎯 This part stays the same
 events = {
     "First Text": "2023-08-14",
     "Proposal": "2023-08-29",
@@ -52,7 +54,6 @@ events = {
     "Your Birthday": "2024-12-22"
 }
 
-# Assign a symbolic love score (totally subjective and cute)
 love_scores = {
     "First Text": 10,
     "Proposal": 30,
@@ -62,7 +63,6 @@ love_scores = {
     "Your Birthday": 100
 }
 
-# Convert to DataFrame
 def get_love_dataframe():
     base_date = datetime.strptime("2023-08-14", "%Y-%m-%d")
     data = []

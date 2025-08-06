@@ -5,7 +5,7 @@ from PIL import Image
 import random
 import numpy as np
 import matplotlib.pyplot as plt
-from love_data import get_love_dataframe
+from love_data import get_love_dataframe, show_love_story
 
 
 
@@ -57,6 +57,8 @@ def show_main_app():
     st.subheader("📈 Our Love Regression")
 
     df = get_love_dataframe()
+
+    show_love_story()
 
     # Polynomial Regression
     X = df["Days"].values.reshape(-1, 1)
